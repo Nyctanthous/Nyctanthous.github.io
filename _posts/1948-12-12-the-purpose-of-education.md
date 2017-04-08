@@ -1,29 +1,54 @@
 ---
 layout: post
 cover: 'assets/images/cover5.jpg'
-title: The Purpose of Education
-date: 1948-12-12 10:18:00
-tags: speeches fiction
+title: IDE: Atom
+date: 2017-03-13 20:00
+tags: ide, atom, python
 subclass: 'post tag-speeches'
-categories: 'casper'
+categories: 'hipster linux'
 navigation: True
-logo: 'assets/images/ghost.png'
+logo: 'assets/images/atom-ui.png'
 ---
 
-As I engage in the so-called "bull sessions" around and about the school, I too often find that most college men have a misconception of the purpose of education. Most of the "brethren" think that education should equip them with the proper instruments of exploitation so that they can forever trample over the masses. Still others think that education should furnish them with noble ends rather than means to an end.
+In my day-to-day programming, I tend to use an eccentric combination of Python,
+Java, and LaTeX to cover most of my needs. While I use other applications to
+deal with LaTeX and Java, Python is an interesting language to find an IDE for.
 
-It seems to me that education has a two-fold function to perform in the life of man and in society: the one is utility and the other is culture. Education must enable a man to become more efficient, to achieve with increasing facility the ligitimate goals of his life.
+I could use the ever-popular Jupyter Notebook for my light programming needs,
+but this really proves insufficient when  I want to sit down and write
+something like a package, which happens reasonably often.
 
-Education must also train one for quick, resolute and effective thinking. To think incisively and to think for one's self is very difficult. We are prone to let our mental life become invaded by legions of half truths, prejudices, and propaganda. At this point, I often wonder whether or not education is fulfilling its purpose. A great majority of the so-called educated people do not think logically and scientifically. Even the press, the classroom, the platform, and the pulpit in many instances do not give us objective and unbiased truths. To save man from the morass of propaganda, in my opinion, is one of the chief aims of education. Education must enable one to sift and weigh evidence, to discern the true from the false, the real from the unreal, and the facts from the fiction.
+ Granted, I could use something like PyCharm or Spyder, but they're both kind
+ of bulky, and Spyder is ugly as hell. Enter Atom, a semi-lightweight tool that
+ is truly based on the idea of expandability. Want functionality? Pull an
+ extension off of git for it. Don't like the interface? Pull an extension. Want
+ to program in Julia? Pull an extension. This approach is quite powerful, and
+ is emulated in other tools such as the unfortunately named Visual Studio Code,
+ which is a very different entity than the bloated mess that is Visual Studio.
 
-The function of education, therefore, is to teach one to think intensively and to think critically. But education which stops with efficiency may prove the greatest menace to society. The most dangerous criminal may be the man gifted with reason, but with no morals.
+ Both Sublime Text and Light Table are similar tools, yet both lack the same
+ degree of community support that Atom has. Because of this, I tend to opt for
+ Atom.
 
-The late Eugene Talmadge, in my opinion, possessed one of the better minds of Georgia, or even America. Moreover, he wore the Phi Beta Kappa key. By all measuring rods, Mr. Talmadge could think critically and intensively; yet he contends that I am an inferior being. Are those the types of men we call educated?
+ ![atom](assets/images/atom-ui.png)
+ _Atom can be as attractive as you want it to be. Shown is the Atom Material
+ theme with Aurora syntax._
 
-We must remember that intelligence is not enough. Intelligence plus character--that is the goal of true education. The complete education gives one not only power of concentration, but worthy objectives upon which to concentrate. The broad education will, therefore, transmit to one not only the accumulated knowledge of the race but also the accumulated experience of social living.
+### Theme Pairings I use:
 
-If we are not careful, our colleges will produce a group of close-minded, unscientific, illogical propagandists, consumed with immoral acts. Be careful, "brethren!" Be careful, teachers!
+-   UI: Atom Material
+-   Syntax: Aurora or Solarized Dark
 
-By **Martin Luther King**
+    ### Plugins I use:
 
-An American pastor, activist, humanitarian. People know him for leading the African-American Civil Rights movement using nonviolent civil disobedience.
+-   Script - acts as if you ran your program through the terminal. Requires that
+    the language you want to use is already installed, just like everyone else.
+    A must-have in order to execute code.
+-   linter-pylama - a very aggressive Python (PEP-8) linter with a nice text
+    readout showing exactly where you went wrong.
+-   beautify - format your ugly code already. Works with almost every language
+    out there.
+-   Hydrogen - Because of the Python development I do, sometimes it's nice just
+    to write a quick script and let it give a Jupyter-style output, like a graph.
+    Hydrogen's features are too many to list, but let it suffice to say that
+    it's awesome.

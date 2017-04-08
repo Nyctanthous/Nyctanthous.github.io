@@ -7,8 +7,4 @@ logo: 'assets/images/ghost.png'
 current: about
 ---
 
-This is a demo blog for Ghost, it contains dummy content which allows you to click around and see what a Ghost blog running the default theme looks like.
-
-We use this for testing and for reference!
-
-If you'd like to set up your own blog, head on over to [https://ghost.org](https://ghost.org) and sign up.
+This is a technical blog I use to write about stuff. Currently, the content here is placeholder content as I build out this site. Stay tuned for interesting developments.

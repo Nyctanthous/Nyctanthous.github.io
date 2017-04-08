@@ -4,17 +4,17 @@
 markdown: kramdown
 highlighter: rouge
 paginate: 5
-language: 'en-uk'
+language: 'en-us'
 
 # Website info
 name: 'Pragma Strict'
-description: "A beautiful narrative written with the world's most elegant publishing platform. The story begins here."
+description: "Dedicated to exploring random cool stuff."
 
 # Author's info
-author: 'Casper McFadden'
+author: 'Ben Montgomery'
 # edit 'categories' in the front matter of every post to match this username
-nickname: casper
-bio: 'A paranormal expert and his daughter bunk in an abandoned house populated by 3 mischievous ghosts and one friendly one.'
+nickname: nyctanthous
+bio: 'Some random guy in college.'
 location: 'USA'
 url: 'www.nyctanthous.github.io'
 image: 'assets/images/casper.png'
@@ -56,13 +56,12 @@ exclude: [vendor]
 # or "master" otherwise
 safe: false
 lsi: false
-username: biomadeira
+username: nyctanthous
 repo: jasper
 branch: master
 relative_source: ../jasper/
 destination: ../jasper-pages/
-production_url:  https://biomadeira.github.io/jasper/
-source_url:      https://github.com/biomadeira/jasper/
+production_url:  https://nyctanthous.github.io/
 
 exclude:
   - README.md

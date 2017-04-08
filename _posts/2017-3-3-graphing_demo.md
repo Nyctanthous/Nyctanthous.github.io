@@ -1,12 +1,11 @@
 ---
-cover: 'assets/images/atom-ui.png'
-title: 'Jupyter'
-date: 2017-03-13 20:00
-tags: ide, atom, python
-subclass: 'post tag-speeches'
+layout: post
+cover: false
+title: Jupyter
+date:   1863-11-19 10:18:00
+tags: python jupyter
+subclass: 'post tag-fiction'
 categories: 'hipster linux'
-navigation: True
-logo: 'assets/images/self.jpg'
 ---
 
 ```python

@@ -7,7 +7,7 @@ tags: blog, markdown, jupyter
 subclass: 'post tag-speeches'
 categories: 'blog'
 navigation: True
-logo: 'assets/images/ghost.jpg'
+logo: 'assets/images/ghost.png'
 use_math: true
 ---
 

@@ -31,6 +31,10 @@
 
     {% include mathjax.html %}
 
+    {% if site.disqus.shortname %}
+ 	{% include disqus_comments.html %}
+    {% endif %}
+
 </head>
 <body class="{% if paginator.page > 1 %}paged archive-template{% elsif page.class %}{{ page.class }}{% else %}home-template{% endif %} nav-closed">
 

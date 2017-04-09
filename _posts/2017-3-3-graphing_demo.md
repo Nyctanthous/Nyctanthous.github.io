@@ -1,13 +1,13 @@
 ---
 mathjax: true
-cover: 'assets/images/cover4.jpg'
+cover: 'assets/images/cover6.jpg'
 title: 'Jupyter Notebook Demo'
 date: 2017-03-13 20:00
 tags: blog, markdown, jupyter
 subclass: 'post tag-speeches'
 categories: 'blog'
 navigation: True
-logo: 'assets/images/self.jpg'
+logo: 'assets/images/ghost.jpg'
 use_math: true
 ---
 

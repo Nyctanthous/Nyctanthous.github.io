@@ -31,12 +31,12 @@ class: 'page-template'
 
         <section class="post-content">
             {{content}}
-	    {% if site.disqus.shortname %}
-	        {% include disqus_comments.html %}
-	    {% endif %}
         </section>
 
     </article>
+	    {% if site.disqus.shortname %}
+	        {% include disqus_comments.html %}
+	    {% endif %}
 
 </main>
 <!-- /post -->

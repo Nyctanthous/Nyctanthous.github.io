@@ -1,4 +1,5 @@
 ---
+mathjax: true
 cover: 'assets/images/cover4.jpg'
 title: 'Jupyter Notebook Demo'
 date: 2017-03-13 20:00

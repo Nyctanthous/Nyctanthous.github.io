@@ -29,6 +29,8 @@
     <!-- [[! Ghost outputs important style and meta data with this tag ]] -->
     {% include head.html %}
 
+    {% include mathjax.html %}
+
 </head>
 <body class="{% if paginator.page > 1 %}paged archive-template{% elsif page.class %}{{ page.class }}{% else %}home-template{% endif %} nav-closed">
 

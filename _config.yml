@@ -21,8 +21,7 @@ image: 'assets/images/self.jpg'
 
 short_url: 'nyctanthous.github.io'
 google_analytics: UA-69281367-1
-disqus:
-    shortname: pragma-strict
+disqus_shortname: pragma-strict
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
 baseurl: /

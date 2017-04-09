@@ -27,7 +27,7 @@ plt.axis([0, 10, 0, 5])
 plt.show()
 ```
 
-![png](2017-3-3-graphing_demo_files/2017-3-3-graphing_demo_2_0.png)
+![png](assets/images/2017-3-3-graphing_demo_files/2017-3-3-graphing_demo_2_0.png)
 
 # MTF Lists
 
@@ -54,7 +54,7 @@ plt.axis([0, 10, 0, 5])
 plt.show()
 ```
 
-![png](2017-3-3-graphing_demo_files/2017-3-3-graphing_demo_4_0.png)
+![png](assets/images/2017-3-3-graphing_demo_files/2017-3-3-graphing_demo_4_0.png)
 
 ```python
 import matplotlib.pyplot as plt
@@ -72,7 +72,7 @@ plt.axis([0, 10, 0, 5])
 plt.show()
 ```
 
-![png](2017-3-3-graphing_demo_files/2017-3-3-graphing_demo_5_0.png)
+![png](assets/images/2017-3-3-graphing_demo_files/2017-3-3-graphing_demo_5_0.png)
 
 ```python
 import pylab
@@ -96,7 +96,7 @@ pylab.plot(x,g)
 pylab.show() # show the plot
 ```
 
-![png](2017-3-3-graphing_demo_files/2017-3-3-graphing_demo_6_0.png)
+![png](assets/images/2017-3-3-graphing_demo_files/2017-3-3-graphing_demo_6_0.png)
 
 ```python
 

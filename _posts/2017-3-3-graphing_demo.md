@@ -7,6 +7,7 @@ subclass: 'post tag-speeches'
 categories: 'blog'
 navigation: True
 logo: 'assets/images/self.jpg'
+use_math: true
 ---
 
 The following is a transposition of `.ipynb` notebooks. Read on.

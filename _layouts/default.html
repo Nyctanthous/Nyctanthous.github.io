@@ -41,10 +41,6 @@
         <!-- [[! Everything else gets inserted here ]] -->
         {{ content }}
 
-	{% if site.disqus.shortname %}
-	    {% include disqus_comments.html %}
-	{% endif %}
-
         <footer class="site-footer clearfix">
           <section class="copyright"><a href="{{ site.baseurl }}">{{ site.name }}</a> &copy; {{  site.time | date: '%Y' }}</section>
           <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> using <a href="https://github.com/biomadeira/jasper">Jasper</a></section>

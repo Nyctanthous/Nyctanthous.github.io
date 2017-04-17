@@ -1,5 +1,6 @@
 ---
 mathjax: true
+layout: post
 cover: 'assets/images/cover6.jpg'
 title: 'Jupyter Notebook Demo'
 date: 2017-03-13 20:00
@@ -8,7 +9,6 @@ subclass: 'post tag-speeches'
 categories: 'blog'
 navigation: True
 logo: 'assets/images/ghost.png'
-use_math: true
 ---
 
 The following is a transposition of `.ipynb` notebooks. Read on.

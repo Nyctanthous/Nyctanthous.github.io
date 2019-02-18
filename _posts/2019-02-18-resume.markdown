@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Ben Montgomery"
+categories: resume
+---
+
+{{ site.baseurl }}/pdfs/cv.pdf

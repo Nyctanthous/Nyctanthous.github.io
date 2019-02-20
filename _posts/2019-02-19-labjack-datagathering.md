@@ -5,11 +5,9 @@ date:   2019-02-19
 excerpt: "Determining torsion constants is easy if you work really hard for it."
 project: true
 tag:
-- jekyll 
-- moon
-- blog
-- about
-- theme
+- python 
+- labjack
+- parallel
 ---
 
 ## Introduction

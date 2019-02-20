@@ -40,11 +40,8 @@ MAX_REQUESTS = 25  # The number of eStreamRead calls that will be performed.
 # Open first found LabJack
 handle = ljm.openS("T7", "ETHERNET", "ANY")  # T7 device, Ethernet connection, Any identifier
 
+# Get device type, connection type, serial number, IP, port, max bytes / MB
 info = ljm.getHandleInfo(handle)
-print("Opened a LabJack with Device type: %i, Connection type: %i,\n"
-      "Serial number: %i, IP address: %s, Port: %i,\nMax bytes per MB: %i" %
-      (info[0], info[1], info[2], ljm.numberToIP(info[3]), info[4], info[5]))
-
 deviceType = info[0]
 
 # Stream Configuration
@@ -82,7 +79,6 @@ try:
     scanRate = ljm.eStreamStart(handle, scansPerRead, numAddresses, aScanList, scanRate)
     print("\nStream started with a scan rate of %0.0f Hz." % scanRate)
 
-    print("\nPerforming %i stream reads." % MAX_REQUESTS)
     start = datetime.now()
     totScans = 0
     totSkip = 0  # Total skipped samples
@@ -101,13 +97,6 @@ try:
         curSkip = aData.count(-9999.0)
         totSkip += curSkip
 
-        print("\neStreamRead %i" % i)
-        ainStr = ""
-        for j in range(0, numAddresses):
-            ainStr += "%s = %0.5f, " % (aScanListNames[j], aData[j])
-        print("  1st scan out of %i: %s" % (scans, ainStr))
-        print("  Scans Skipped = %0.0f, Scan Backlogs: Device = %i, LJM = "
-              "%i" % (curSkip/numAddresses, ret[1], ret[2]))
         i += 1
 
     end = datetime.now()
@@ -141,7 +130,9 @@ ljm.close(handle)
 
 ```
 
-As you can imagine, this makes the Labjack LJM devices difficult to deploy. However, the thoroughness of the base library's authors make it possible to write an API that can streamline this process.
+As you can imagine, this makes the Labjack LJM devices difficult to deploy. How do you know what rates you can safely scan at? What is the importance of `STREAM_TRIGGER_INDEX`, `AIN_ALL_NEGATIVE_CH`, or `STREAM_SETTLING_US`? Making every developer who needs to use this library learn the meaning of these kinds of parameters and configurations leads to universally high time investment - time that could be spent in development.
+
+Fortunately, it is this thoroughness of the base library that makes it possible to write an API to streamline this process.
 
 ### C Bindings of the Base Libraries
 

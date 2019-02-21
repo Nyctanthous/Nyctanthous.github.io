@@ -4,7 +4,6 @@ title: "A Post with Images"
 date: 2013-05-22
 excerpt: "Examples and code for displaying images in posts."
 tags: [sample post, images, test]
-comments: true
 ---
 
 Here are some examples of what a post with images might look like. If you want to display two or three images next to each other responsively use `figure` with the appropriate `class`. Each instance of `figure` is auto-numbered and displayed in the caption.
@@ -95,3 +94,8 @@ It will look something like this:
 	http://vignette1.wikia.nocookie.net/naruto/images/1/15/J%C5%ABho_S%C5%8Dshiken.png
 {% endcapture %}
 {% include gallery images=images caption="Test images" cols=3 %}
+
+### Video
+{% highlight html %}
+<iframe width="560" height="315" src="//www.youtube.com/embed/SU3kYxJmWuQ" frameborder="0"> </iframe>
+{% endhighlight %}

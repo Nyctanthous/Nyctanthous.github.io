@@ -183,23 +183,25 @@ This kind of abstraction makes it far easier to advance our project. You can see
 
 Our methodology is as follows:
 
-1. Stream data s.t. a large volume of data is sent; we arbitrarily chose the values in the table below.
-2. Observe the time between the device time and the time when data is recieved on the host computer.
-3. Stream for a sufficiently long time as to get one million samples of this time delta.
-4. Streaming is done on the same computer, with the same cables, and the same Labjack, on the same day.
+1. Stream data s.t. a at least 1 million scans are expected to be completed in the given timeframe. For instance, if we scan at 100 kHz, we expect that in 10 seconds we will have collected 1 million scans.
+2. Stream for the calculated amount of time and no longer. We measure this time using the host computer's clock, as called by Python's `time.time()`. We expect on most systems, this clock will have millisecond accuracy when measuring time deltas, and in all cases to have 1-second accuracy.
+3. Observe if the expected number of scans were completed in the time given.
+4. Streaming is done on the same computer, with the same cables, and the same Labjack, on the same day, using the analog in channels.
 
-| # Channels | Frequency | Scans / Read | Resolution Level |
-|:----------:|:---------:|:------------:|:----------------:|
-|     4      | 12000 Hz  |      32      |         0        |
-|     4      | 12000 Hz  |      32      |         2        |
-|     4      | 12000 Hz  |      32      |         4        |
-|     4      | 12000 Hz  |      32      |         6        |
-|     4      | 12000 Hz  |      32      |         8        |
-|     1      | 40000 Hz  |      32      |         0        |
-|     1      | 40000 Hz  |      32      |         2        |
-|     1      | 40000 Hz  |      32      |         4        |
-|     1      | 40000 Hz  |      32      |         6        |
-|     1      | 40000 Hz  |      32      |         8        |
+One result of this approach is the base LJM implementation tends to stop slightly too late, as aparrent in the table below. This uncertainty in time means that we are only confident the base LJM implementation fails when the Labjack device starts skipping scans, a sign that an internal data buffer is filling up.
+
+| # Channels | Frequency  | Scans / Read | Resolution Level | Time Streaming (seconds) | Expected Scans | LJM scans / skips | `labjack-controller` scans / skips |
+|:----------:|:----------:|:------------:|:----------------:|:------------------------:|:--------------:|:-----------------:|:----------------------------------:|
+|     4      | 25000 Hz   |      250     |         0        |            40            |    1,000,000   |  **986,000 / 112**|           1,000,000 / 0            |
+|     4      | 22500 Hz   |      250     |         2        |            50            |    1,125,000   |  1,126,250 / 0    |           1,125,000 / 0            |
+|     4      | 22000 Hz   |      250     |         4        |            50            |    1,100,000   |  1,101,250 / 0    |           1,100,000 / 0            |
+|     4      | 22000 Hz   |      250     |         6        |            50            |    1,100,000   |  1,101,250 / 0    |           1,100,000 / 0            |
+|     1      | 100000 Hz  |      500     |         0        |            10            |    1,000,000   |  **982,500 / 9**  |           1,000,000 / 0            |
+|     1      | 56000 Hz   |      500     |         2        |            18            |    1,008,000   |  1,011,500 / 0    |           1,008,000 / 0            |
+|     1      | 15000 Hz   |      500     |         4        |            67            |    1,005,000   |  1,006,000 / 0    |           1,005,000 / 0            |
+|     1      | 3000 Hz    |      500     |         6        |           334            |    1,002,000   |  1,002,500 / 0    |           1,002,000 / 0            |
+
+We see that the base LJM implemetation starts skipping scans on some stream settings, resulting in a loss of data. `labjack-controller` does not have this shortcoming, due to its lower overhead processing data.
 
 
 ## Conclusion

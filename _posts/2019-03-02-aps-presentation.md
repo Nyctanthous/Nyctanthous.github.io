@@ -15,7 +15,7 @@ I'm not a huge fan of LibreOffice (although it seems to regularly get better), s
 
 <body>
   <div>
-    <iframe src="/about/aps-2019-presentation.html" name="targetframe" allowTransparency="true" scrolling="no" frameborder="0" >
+    <iframe width="100%" src="/about/aps-2019-presentation.html" name="targetframe" allowTransparency="true" scrolling="no" frameborder="0" >
     </iframe>
   </div>
 </body>
